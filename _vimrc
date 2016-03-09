@@ -39,6 +39,8 @@ set enc=utf-8
 set fileencoding=utf-8
 set fileencodings=ucs-bom,utf8,prc
 
+colorscheme blackboard
+
 source $VIMRUNTIME/vimrc_example.vim
 source $VIMRUNTIME/mswin.vim
 behave mswin
