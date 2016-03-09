@@ -12,6 +12,7 @@ Plugin 'VundleVim/Vundle.vim'
 
 " Plugins
 Bundle 'takac/vim-fontmanager'
+Plugin 'lervag/vimtex'
 
 " Color schemes
 Plugin 'tomasr/molokai'
@@ -32,7 +33,11 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 "
-let g:fontman_font = "SourceCodePro"
+let g:fontman_font = "Source Code Pro"
+
+set enc=utf-8
+set fileencoding=utf-8
+set fileencodings=ucs-bom,utf8,prc
 
 source $VIMRUNTIME/vimrc_example.vim
 source $VIMRUNTIME/mswin.vim
