@@ -46,6 +46,9 @@ set shiftwidth=4
 " On pressing tab, insert 4 spaces
 set expandta
 
+" Set linenumbers on
+set number
+
 syntax enable
 set background=dark
 colorscheme solarized
