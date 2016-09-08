@@ -2,9 +2,7 @@
 Follow vundle windows installation
 
 cd C:/vim
-
 git clone https://github.com/VundleVim/Vundle.vim.git C:/vim/vimfiles/bundle/Vundle.vim
-
 gvim _vimrc
 
 Download Source Code Pro font 
