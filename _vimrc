@@ -25,6 +25,7 @@ Plugin 'valloric/youcompleteme'
 Plugin 'tmhedberg/SimpylFold'
 Plugin 'jnurmine/Zenburn'
 Plugin 'kien/ctrlp.vim'
+Plugin 'low-ghost/nerdtree-fugitive'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -43,6 +44,8 @@ filetype plugin indent on    " required
 autocmd VimEnter * NERDTree
 autocmd BufEnter * NERDTreeMirror
 
+:set hlsearch
+
 filetype plugin indent on
 " show existing tab with 4 spaces width
 set tabstop=4
@@ -52,14 +55,14 @@ set shiftwidth=4
 set expandtab
 
 let g:NERDTreeIndicatorMapCustom = {
-    \ "Modified"  : "?",
-    \ "Staged"    : "?",
+    \ "Modified"  : "*",
+    \ "Staged"    : "+",
     \ "Untracked" : "?",
-    \ "Renamed"   : "?",
-    \ "Unmerged"  : "?",
-    \ "Deleted"   : "?",
-    \ "Dirty"     : "?",
-    \ "Clean"     : "??",
+    \ "Renamed"   : ">",
+    \ "Unmerged"  : "=",
+    \ "Deleted"   : "x",
+    \ "Dirty"     : "D",
+    \ "Clean"     : "OK",
     \ "Unknown"   : "?"
     \ }
 
@@ -73,8 +76,6 @@ set foldlevel=99
 nnoremap <space> za
 " Docstrings for folded code
 let g:SimpylFold_docstring_preview=1
-" Mark bad whitespace
-au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
 
 set splitbelow
 set splitright
@@ -84,6 +85,11 @@ nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
+
+"set font
+if has('gui_running')
+    set guifont=Source_Code_Pro:h11:cBALTIC:qDRAFT
+endif
 
 syntax enable
 if has('gui_running')
